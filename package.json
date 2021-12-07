@@ -1,0 +1,27 @@
+{
+  "name": "datetimeapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel serve ./src/index.html --open",
+    "build": "npm run clean && parcel build ./src/index.html --dist-dir ./out --no-source-maps",
+    "clean": "rm -rf ./.parcel-cache ./dist ./out",
+    "serve": "live-server ./out",
+    "deploy": "surge ./out --domain https://datetimeapp.surge.sh"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.0.1",
+    "parcel": "^2.0.1"
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "^1.6.2",
+    "axios": "^0.24.0",
+    "bulma": "^0.9.3",
+    "bulma-calendar": "^6.1.15",
+    "redux-logger": "^3.0.6"
+  }
+}
