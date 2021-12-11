@@ -19,6 +19,7 @@
     "axios": "^0.24.0",
     "bulma": "^0.9.3",
     "bulma-calendar": "^6.1.15",
+    "bulma-toast": "^2.4.1",
     "redux-logger": "^3.0.6"
   }
 }

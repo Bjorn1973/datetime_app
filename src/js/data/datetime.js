@@ -1,12 +1,15 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
-export const getDateTime = createAsyncThunk("datetime", async (number) => {
-  const response = await axios(
-    `https://showcase.api.linx.twenty57.net/UnixTime/fromunix?timestamp=${number}`
-  );
-  return response.data;
-});
+export const getDateTime = createAsyncThunk(
+  "datetime/getDateTime",
+  async (number) => {
+    const response = await axios(
+      `https://showcase.api.linx.twenty57.net/UnixTime/fromunix?timestamp=${number}`
+    );
+    return response.data;
+  }
+);
 
 const dateSlice = createSlice({
   name: "datetime",
@@ -21,7 +24,7 @@ const dateSlice = createSlice({
       state.loading = true;
       state.error = false;
     },
-    [getDateTime.error]: (state) => {
+    [getDateTime.rejected]: (state) => {
       state.loading = false;
       state.error = true;
     },

@@ -1,12 +1,10 @@
 import store from "../data";
-import bulmaCalendar from "bulma-calendar";
 
 export default class Datetime {
   constructor(holder) {
     this.holder = holder;
     this.dateRef = null;
     this.timeRef = null;
-    this.dateInput = null;
     this.init();
     this.render();
     store.subscribe(this.render.bind(this));
@@ -16,21 +14,21 @@ export default class Datetime {
     this.holder.insertAdjacentHTML(
       "beforeend",
       `
-      <section class='datetime columns'>
-      <div class='datetime__date column'>date</div>
-      <div class='datetime__time column'>time</div>
-      </section>`
+      <h1 class='title'>Date: </span> <span class="datetime__date"></span></h1>
+      <h1 class='title'>Time: <span class="datetime__time"></span></h1>
+      `
     );
     this.dateRef = this.holder.querySelector(".datetime__date");
     this.timeRef = this.holder.querySelector(".datetime__time");
   }
   render() {
-    this.dateRef.innerHTML = `<input class="dateInput" type="date" >`;
-    this.dateInput = document.querySelector(".dateInput");
-    this.dateInput.value = store.getState().datetime.datetime.slice(0, 10);
-    this.timeRef.innerHTML = `<input class="timeInput" type="time">`;
-    this.timeInput = document.querySelector(".timeInput");
-    this.timeInput.value = store.getState().datetime.datetime.slice(-8);
+    this.dateRef.innerText = store
+      .getState()
+      .datetime.datetime.slice(0, 10)
+      .split("-")
+      .reverse()
+      .join("-");
+    this.timeRef.innerText = store.getState().datetime.datetime.slice(-8);
   }
   //   setEvents() {}
 }
