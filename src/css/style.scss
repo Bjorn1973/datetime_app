@@ -110,9 +110,9 @@ html {
             width: 70%;
           }
           .button.is-primary {
-            width: 30%;
+            width: 40%;
             .button__arrow {
-              display: none;
+              display: block;
               fill: white;
             }
           }
@@ -123,6 +123,7 @@ html {
 }
 @media screen and (max-width: 768px) {
   .container {
+    height: 100%;
     .introWrapper {
       padding-top: 6rem;
       .block {
@@ -138,14 +139,10 @@ html {
         .field {
           padding-left: 0;
           .input {
-            width: 50%;
+            width: 60%;
           }
           .button.is-primary {
-            width: 20%;
-            .button__arrow {
-              display: block;
-              fill: white;
-            }
+            width: 30%;
           }
         }
       }
@@ -163,35 +160,12 @@ html {
         }
       }
     }
-    .columns {
-      .column {
-        .field {
-          padding-left: 0;
-          .input {
-            width: 60%;
-          }
-          .button.is-primary {
-            width: 30%;
-            .button__arrow {
-              display: block;
-              fill: white;
-            }
-          }
-        }
-      }
-    }
   }
 }
 @media screen and (max-width: 500px) {
   .container {
     .introWrapper {
       padding-top: 3rem;
-      .block {
-        margin: 1rem;
-        .intro__text {
-          margin: 0.5rem;
-        }
-      }
     }
   }
 }
@@ -201,12 +175,6 @@ html {
       padding-top: 3rem;
       .intro.title {
         text-align: center;
-      }
-      .block {
-        margin: 1rem;
-        .intro__text {
-          margin: 0.5rem;
-        }
       }
     }
     .columns {
@@ -227,12 +195,6 @@ html {
   .container {
     .introWrapper {
       padding-top: 2rem;
-      .block {
-        margin: 1rem;
-        .intro__text {
-          margin: 0.5rem;
-        }
-      }
     }
   }
 }
@@ -242,12 +204,6 @@ html {
       padding-top: 1rem;
       .intro.title {
         text-align: center;
-      }
-      .block {
-        margin: 1rem;
-        .intro__text {
-          margin: 0.5rem;
-        }
       }
     }
     .columns {
