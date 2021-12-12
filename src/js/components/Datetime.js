@@ -13,13 +13,17 @@ export default class Datetime {
   init() {
     this.holder.insertAdjacentHTML(
       "beforeend",
-      `
-      <h1 class='title'>Date: </span> <span class="datetime__date"></span></h1>
-      <h1 class='title'>Time: <span class="datetime__time"></span></h1>
+      `<div class="column datetime">
+      <h1 class='title'><span class="title__date">Date: </span><span class="title__date__cal"><svg class="icon icon-calendar">
+      <use xlink:href="../../../icons/symbol-defs.svg#icon-calendar"></use>
+    </svg></span> <span class="title__date__askedDate"></span></h1>
+      <h1 class='title'><span class="title__time">Time: </span><span class="title__date__clock"><svg class="icon icon-clock">
+      <use xlink:href="../../../icons/symbol-defs.svg#icon-clock"></use>
+    </svg></span><span class="title__date__askedTime"></span></h1></div>
       `
     );
-    this.dateRef = this.holder.querySelector(".datetime__date");
-    this.timeRef = this.holder.querySelector(".datetime__time");
+    this.dateRef = this.holder.querySelector(".title__date__askedDate");
+    this.timeRef = this.holder.querySelector(".title__date__askedTime");
   }
   render() {
     this.dateRef.innerText = store

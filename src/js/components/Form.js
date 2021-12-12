@@ -16,15 +16,17 @@ class Form {
   init() {
     this.holder.insertAdjacentHTML(
       "beforeend",
-      `<form class="field">
-          <label class="label">Enter a Unix Timestamp</label>
-          <div class="control">
-          <input class="input" type="number" placeholder="E.g. 1639219667" min="0">
+      `<div class="column form"><form class="field">
+          <label class="label">Enter a Unix Timestamp</label>   
+          <div class="control"> 
+          <input class="input" type="number" placeholder="E.g. 1639219667" min="0" max="253402300799">
           </div>
           <div class="control">
-          <button class="button is-primary">Convert</button>
+          <button class="button is-primary"><span class="button__text">Convert</span><span class="button__arrow"><svg class="icon icon-arrow-right2">
+          <use xlink:href="../../../icons/symbol-defs.svg#icon-arrow-right2"></use>
+        </svg></span></button>
           </div>
-          </form>
+          </form></div>
           `
     );
     this.inputRef = this.holder.querySelector(".input");
@@ -58,7 +60,17 @@ class Form {
     this.formRef.onsubmit = (e) => {
       e.preventDefault();
       store.dispatch(getDateTime(this.inputRef.value));
-      console.log(this.inputRef.value.length);
+    };
+    this.inputRef.onfocus = (e) => {
+      e.preventDefault();
+      toast({
+        message: "input a number between 0 and 253402300799",
+        type: "is-info",
+        duration: 4000,
+        position: "top-center",
+        dismissible: true,
+        animate: { in: "fadeIn", out: "fadeOut" },
+      });
     };
   }
 }
