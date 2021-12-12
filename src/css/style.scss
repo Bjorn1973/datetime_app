@@ -14,7 +14,7 @@ html {
   background-color: rgb(242, 242, 242, 0.75);
   height: 100vh;
   .introWrapper {
-    padding-top: 100px;
+    padding-top: 10rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -27,6 +27,7 @@ html {
       font-size: 1.2rem;
       .intro__question {
         color: #000099;
+        font-size: 1.5rem;
       }
       .intro__text {
         margin: 0.8rem;
@@ -72,6 +73,217 @@ html {
           .button__arrow {
             display: block;
             fill: white;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 1408px) {
+  .container {
+    .introWrapper {
+      padding-top: 9rem;
+    }
+    .columns {
+      .column {
+        .field {
+          .input {
+            width: 60%;
+          }
+          .button.is-primary {
+            width: 30%;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 890px) {
+  .container {
+    .introWrapper {
+      padding-top: 7.5rem;
+    }
+    .columns {
+      .column {
+        .field {
+          .input {
+            width: 70%;
+          }
+          .button.is-primary {
+            width: 30%;
+            .button__arrow {
+              display: none;
+              fill: white;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .container {
+    .introWrapper {
+      padding-top: 6rem;
+      .block {
+        margin-bottom: 1rem;
+      }
+    }
+    .columns {
+      margin-top: 0;
+      .column {
+        &.datetime {
+          padding-top: 2rem;
+        }
+        .field {
+          padding-left: 0;
+          .input {
+            width: 50%;
+          }
+          .button.is-primary {
+            width: 20%;
+            .button__arrow {
+              display: block;
+              fill: white;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 635px) {
+  .container {
+    .introWrapper {
+      padding-top: 5rem;
+      .block {
+        margin: 1rem;
+        .intro__text {
+          margin: 0.5rem;
+        }
+      }
+    }
+    .columns {
+      .column {
+        .field {
+          padding-left: 0;
+          .input {
+            width: 60%;
+          }
+          .button.is-primary {
+            width: 30%;
+            .button__arrow {
+              display: block;
+              fill: white;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 500px) {
+  .container {
+    .introWrapper {
+      padding-top: 3rem;
+      .block {
+        margin: 1rem;
+        .intro__text {
+          margin: 0.5rem;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 470px) {
+  .container {
+    .introWrapper {
+      padding-top: 3rem;
+      .intro.title {
+        text-align: center;
+      }
+      .block {
+        margin: 1rem;
+        .intro__text {
+          margin: 0.5rem;
+        }
+      }
+    }
+    .columns {
+      .column {
+        .field {
+          .input {
+            width: 70%;
+          }
+          .button.is-primary {
+            width: 40%;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 420px) {
+  .container {
+    .introWrapper {
+      padding-top: 2rem;
+      .block {
+        margin: 1rem;
+        .intro__text {
+          margin: 0.5rem;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 360px) {
+  .container {
+    .introWrapper {
+      padding-top: 1rem;
+      .intro.title {
+        text-align: center;
+      }
+      .block {
+        margin: 1rem;
+        .intro__text {
+          margin: 0.5rem;
+        }
+      }
+    }
+    .columns {
+      .column {
+        .field {
+          .input {
+            width: 80%;
+          }
+          .button.is-primary {
+            width: 50%;
+          }
+        }
+        .title__date,
+        .title__time {
+          display: none;
+          color: #0000b3;
+        }
+        .title__date__cal,
+        .title__date__clock {
+          display: inline-block;
+          fill: #0000b3;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 340px) {
+  .container {
+    .columns {
+      .column {
+        .field {
+          .input {
+            width: 100%;
+          }
+          .button.is-primary {
+            width: 50%;
           }
         }
       }

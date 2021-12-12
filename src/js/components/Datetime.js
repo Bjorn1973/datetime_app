@@ -19,7 +19,7 @@ export default class Datetime {
     </svg></span> <span class="title__date__askedDate"></span></h1>
       <h1 class='title'><span class="title__time">Time: </span><span class="title__date__clock"><svg class="icon icon-clock">
       <use xlink:href="../../../icons/symbol-defs.svg#icon-clock"></use>
-    </svg></span><span class="title__date__askedTime"></span></h1></div>
+    </svg></span> <span class="title__date__askedTime"></span></h1></div>
       `
     );
     this.dateRef = this.holder.querySelector(".title__date__askedDate");
