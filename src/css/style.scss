@@ -10,11 +10,15 @@ html {
   background-blend-mode: lighten;
   background-image: url("../images/image/calendarclock.jpg");
   background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
   background-repeat: no-repeat;
-  background-color: rgb(242, 242, 242, 0.75);
-  height: 100vh;
+  background-color: rgb(242, 242, 242, 0.8);
+  width: 100%;
+  height: auto;
   .introWrapper {
-    padding-top: 10rem;
+    padding-top: 6rem;
+    padding-bottom: 3rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -35,9 +39,11 @@ html {
     }
   }
   .columns {
-    margin: 1.5rem;
     .column {
       padding: 1rem;
+      &.datetime {
+        padding-top: 3.75rem;
+      }
       .title__date,
       .title__time {
         color: #0000b3;
@@ -52,9 +58,9 @@ html {
         color: #0000ff;
       }
       .field {
-        padding-left: 1rem;
         .label {
           color: #0000b3;
+          font-size: 1.5rem;
         }
         .input {
           width: 50%;
@@ -79,29 +85,11 @@ html {
     }
   }
 }
-@media screen and (max-width: 1408px) {
+@media screen and (max-width: 1440px) {
   .container {
     .introWrapper {
-      padding-top: 9rem;
-    }
-    .columns {
-      .column {
-        .field {
-          .input {
-            width: 60%;
-          }
-          .button.is-primary {
-            width: 30%;
-          }
-        }
-      }
-    }
-  }
-}
-@media screen and (max-width: 890px) {
-  .container {
-    .introWrapper {
-      padding-top: 7.5rem;
+      padding-top: 5rem;
+      padding-bottom: 2.5rem;
     }
     .columns {
       .column {
@@ -111,6 +99,41 @@ html {
           }
           .button.is-primary {
             width: 40%;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 1024px) {
+  .container {
+    .introWrapper {
+      padding-top: 3rem;
+      padding-bottom: 1.5rem;
+      .block {
+        margin: 1rem;
+      }
+    }
+  }
+}
+@media screen and (max-width: 890px) {
+  .container {
+    .introWrapper {
+      padding-top: 2rem;
+      padding-bottom: 1rem;
+    }
+  }
+}
+@media screen and (max-width: 835px) {
+  .container {
+    .columns {
+      .column {
+        .field {
+          .input {
+            width: 100%;
+          }
+          .button.is-primary {
+            width: 100%;
             .button__arrow {
               display: block;
               fill: white;
@@ -123,26 +146,28 @@ html {
 }
 @media screen and (max-width: 768px) {
   .container {
-    height: 100%;
     .introWrapper {
-      padding-top: 6rem;
       .block {
-        margin-bottom: 1rem;
+        .intro__text {
+          margin: 0rem;
+        }
       }
     }
     .columns {
+      margin: 1rem;
       margin-top: 0;
       .column {
+        padding-left: 0rem;
         &.datetime {
           padding-top: 2rem;
         }
         .field {
           padding-left: 0;
           .input {
-            width: 60%;
+            width: 70%;
           }
           .button.is-primary {
-            width: 30%;
+            width: 35%;
           }
         }
       }
@@ -152,12 +177,8 @@ html {
 @media screen and (max-width: 635px) {
   .container {
     .introWrapper {
-      padding-top: 5rem;
       .block {
         margin: 1rem;
-        .intro__text {
-          margin: 0.5rem;
-        }
       }
     }
   }
@@ -165,36 +186,29 @@ html {
 @media screen and (max-width: 500px) {
   .container {
     .introWrapper {
-      padding-top: 3rem;
-    }
-  }
-}
-@media screen and (max-width: 470px) {
-  .container {
-    .introWrapper {
-      padding-top: 3rem;
-      .intro.title {
-        text-align: center;
-      }
+      padding-top: 1.5rem;
+      padding-bottom: 0.75rem;
     }
     .columns {
       .column {
         .field {
           .input {
-            width: 70%;
+            width: 100%;
           }
           .button.is-primary {
-            width: 40%;
+            width: 100%;
           }
         }
       }
     }
   }
 }
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 470px) {
   .container {
     .introWrapper {
-      padding-top: 2rem;
+      .intro.title {
+        text-align: center;
+      }
     }
   }
 }
@@ -202,20 +216,10 @@ html {
   .container {
     .introWrapper {
       padding-top: 1rem;
-      .intro.title {
-        text-align: center;
-      }
+      padding-bottom: 0.5rem;
     }
     .columns {
       .column {
-        .field {
-          .input {
-            width: 80%;
-          }
-          .button.is-primary {
-            width: 50%;
-          }
-        }
         .title__date,
         .title__time {
           display: none;
@@ -232,15 +236,16 @@ html {
 }
 @media screen and (max-width: 340px) {
   .container {
+    .introWrapper {
+      padding-top: 0.5rem;
+      padding-bottom: 0.25rem;
+    }
     .columns {
+      margin: 0.5rem;
       .column {
-        .field {
-          .input {
-            width: 100%;
-          }
-          .button.is-primary {
-            width: 50%;
-          }
+        &.form,
+        &.datetime {
+          padding: 0.5rem;
         }
       }
     }

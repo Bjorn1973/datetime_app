@@ -33,6 +33,10 @@ export default class Datetime {
       .reverse()
       .join("-");
     this.timeRef.innerText = store.getState().datetime.datetime.slice(-8);
+    if (store.getState().datetime.error) {
+      this.dateRef.innerText = "";
+      this.timeRef.innerText = "";
+    }
   }
   //   setEvents() {}
 }
