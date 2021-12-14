@@ -4,18 +4,18 @@ html {
   font-size: 62.5%;
   body {
     font-family: "Roboto", sans-serif;
+    background-blend-mode: lighten;
+    background-image: url("../images/image/calendarclock.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-color: rgb(242, 242, 242, 0.8);
+    width: 100%;
+    height: 100vh;
   }
 }
 .container {
-  background-blend-mode: lighten;
-  background-image: url("../images/image/calendarclock.jpg");
-  background-size: cover;
-  background-position: center center;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-color: rgb(242, 242, 242, 0.8);
-  width: 100%;
-  height: auto;
   .introWrapper {
     padding-top: 6rem;
     padding-bottom: 3rem;
@@ -27,14 +27,15 @@ html {
       color: #000080;
     }
     .block {
-      margin: 2rem;
+      margin: 2rem 1.5rem;
       font-size: 1.2rem;
       .intro__question {
         color: #000099;
         font-size: 1.5rem;
+        font-weight: 700;
       }
       .intro__text {
-        margin: 0.8rem;
+        margin-top: 0.5rem;
       }
     }
   }

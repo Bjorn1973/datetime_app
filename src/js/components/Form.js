@@ -22,9 +22,10 @@ class Form {
           <input class="input" type="number" placeholder="E.g. 1639219667" min="0" max="253402300799">
           </div>
           <div class="control">
-          <button class="button is-primary"><span class="button__text">Convert</span><span class="button__arrow"><svg class="icon icon-arrow-right2">
-          <use xlink:href="../../../icons/symbol-defs.svg#icon-arrow-right2"></use>
-        </svg></span></button>
+          <button class="button is-primary"><span class="button__text">Convert</span>
+          <span class="button__arrow"><svg class="icon icon-arrow-right2">
+          <use xlink:href="#icon-arrow-right2"></use>
+          </svg></span></button>
           </div>
           </form></div>
           `
@@ -46,20 +47,21 @@ class Form {
     } else {
       this.endLoading();
     }
-    if (store.getState().datetime.error) {
-      toast({
-        message: "You forgot your timestamp!",
-        type: "is-warning",
-        position: "top-center",
-        dismissible: true,
-        animate: { in: "fadeIn", out: "fadeOut" },
-      });
-    }
   }
   setEvents() {
     this.formRef.onsubmit = (e) => {
       e.preventDefault();
-      store.dispatch(getDateTime(this.inputRef.value));
+      if (this.inputRef.value === "") {
+        toast({
+          message: "You forgot your timestamp!",
+          type: "is-warning",
+          position: "top-center",
+          dismissible: true,
+          animate: { in: "fadeIn", out: "fadeOut" },
+        });
+      } else {
+        store.dispatch(getDateTime(this.inputRef.value));
+      }
     };
     this.inputRef.onfocus = (e) => {
       e.preventDefault();

@@ -11,7 +11,9 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@parcel/packager-raw-url": "^2.0.1",
     "@parcel/transformer-sass": "^2.0.1",
+    "@parcel/transformer-webmanifest": "^2.0.1",
     "parcel": "^2.0.1",
     "posthtml-include": "^1.7.2"
   },
@@ -22,5 +24,13 @@
     "bulma-calendar": "^6.1.15",
     "bulma-toast": "^2.4.1",
     "redux-logger": "^3.0.6"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bjorn1973/datetime_app.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Bjorn1973/datetime_app/issues"
+  },
+  "homepage": "https://github.com/Bjorn1973/datetime_app#readme"
 }

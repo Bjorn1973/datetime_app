@@ -15,10 +15,10 @@ export default class Datetime {
       "beforeend",
       `<div class="column datetime">
       <h1 class='title'><span class="title__date">Date: </span><span class="title__date__cal"><svg class="icon icon-calendar">
-      <use xlink:href="../../../icons/symbol-defs.svg#icon-calendar"></use>
+      <use xlink:href="#icon-calendar"></use>
     </svg></span> <span class="title__date__askedDate"></span></h1>
       <h1 class='title'><span class="title__time">Time: </span><span class="title__date__clock"><svg class="icon icon-clock">
-      <use xlink:href="../../../icons/symbol-defs.svg#icon-clock"></use>
+      <use xlink:href=".#icon-clock"></use>
     </svg></span> <span class="title__date__askedTime"></span></h1></div>
       `
     );
