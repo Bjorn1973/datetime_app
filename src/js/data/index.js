@@ -6,7 +6,12 @@ const reducer = {
   datetime,
 };
 
+let middleware = getDefaultMiddleware();
+if (process.env.NODE_ENV !== "production") {
+  middleware = middleware.concat(logger);
+}
+
 export default configureStore({
   reducer,
-  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(logger),
+  middleware,
 });
