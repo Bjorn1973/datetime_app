@@ -13,7 +13,17 @@ link: https://timestampconverter.surge.sh
 
         	The app is build as an exercice on everthing I learned so far in my course 'Frontend developer' at Syntra-AB.
 
-3.  Examples
-    Unix Timestamp = 1 ==> 1970-01-01 00:00:01
-    Unix Timestamp = 1639565300 ==> 2021-12-15 10:48:20
-    Unix Timestamp = 253402300799 ==> 9999-12-31 23:59:59
+3.  Technologies
+
+         -  HTML
+         -  CSS/SCSS
+         -  @redux/toolkit
+         -  bulma
+         -  bulma-toast
+
+
+4.  Examples
+    ![input an integer](https://github.com/Bjorn1973/datetime_app/blob/main/src/images/image/example1.png)
+    ![date and time are shown](https://github.com/Bjorn1973/datetime_app/blob/main/src/images/image/example1a.png)
+    ![convert without an integer](https://github.com/Bjorn1973/datetime_app/blob/main/src/images/image/example2.png)
+    ![focus input](https://github.com/Bjorn1973/datetime_app/blob/main/src/images/image/example3.png)
