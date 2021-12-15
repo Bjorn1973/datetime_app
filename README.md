@@ -8,7 +8,7 @@ link: https://timestampconverter.surge.sh
 
 2.  Description
 
-        When given an Unix Timestam as an integer between 0 and 			253402300799 the app wil convert this timestamp in the corresponding date and time.
+        When given an Unix Timestam as an integer between 0 and 253402300799 the app wil convert this timestamp in the corresponding date and time.
         The count starts at the Unix Epoch on January 1st, 1970 at UTC (Coördnated Universal Time).
         The unix timestap is merely the number of seconds between a particular date (in the past of in the futur) and the Unix Epoch.
 
@@ -21,7 +21,6 @@ link: https://timestampconverter.surge.sh
          -  @redux/toolkit
          -  bulma
          -  bulma-toast
-
 
 4.  Examples
     ![input an integer](https://github.com/Bjorn1973/datetime_app/blob/main/src/images/image/example1.png)
