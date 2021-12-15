@@ -21,7 +21,10 @@ link: https://timestampconverter.surge.sh
 
          -  HTML
          -  CSS/SCSS
+         -  Javascript
          -  @redux/toolkit
+         -  redux-logger
+         -  axios
          -  bulma
          -  bulma-toast
 
