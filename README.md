@@ -12,7 +12,7 @@ link: https://timestampconverter.surge.sh
         this timestamp in the corresponding date and time.
         The count starts at the Unix Epoch on January 1st, 1970 at UTC (Coördnated Universal Time).
         The unix timestap is merely the number of seconds between a particular date
-        (in the past of in the futur) and the Unix Epoch.
+        (in the past or in the futur) and the Unix Epoch.
 
         The app is build as an exercice on everthing I learned so far in my course
         'Frontend developer' at Syntra-AB.
