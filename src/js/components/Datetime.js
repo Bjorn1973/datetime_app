@@ -1,4 +1,5 @@
 import store from "../data";
+import datetime from "../data/datetime";
 
 export default class Datetime {
   constructor(holder) {
@@ -22,20 +23,23 @@ export default class Datetime {
     </svg></span> <span class="title__date__askedTime"></span></h1></div>
       `
     );
+    this.datetime = this.holder.querySelector(".datetime");
     this.dateRef = this.holder.querySelector(".title__date__askedDate");
     this.timeRef = this.holder.querySelector(".title__date__askedTime");
   }
+
   render() {
-    this.dateRef.innerText = store
-      .getState()
-      .datetime.datetime.slice(0, 10)
-      .split("-")
-      .reverse()
-      .join("-");
-    this.timeRef.innerText = store.getState().datetime.datetime.slice(-8);
-    if (store.getState().datetime.error) {
-      this.dateRef.innerText = "";
-      this.timeRef.innerText = "";
+    if (store.getState().datetime.datetime) {
+      this.dateRef.innerText = store
+        .getState()
+        .datetime.datetime.slice(0, 10)
+        .split("-")
+        .reverse()
+        .join("-");
+      this.timeRef.innerText = store.getState().datetime.datetime.slice(-8);
+      this.datetime.style.visibility = "visible";
+    } else {
+      this.datetime.style.visibility = "hidden";
     }
   }
   //   setEvents() {}

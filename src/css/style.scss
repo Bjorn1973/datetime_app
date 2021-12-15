@@ -40,9 +40,11 @@ html {
     }
   }
   .columns {
+    margin-left: 0.5rem;
     .column {
       padding: 1rem;
       &.datetime {
+        visibility: hidden;
         padding-top: 3.75rem;
       }
       .title__date,

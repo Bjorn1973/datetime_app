@@ -18,7 +18,11 @@ const dateSlice = createSlice({
     loading: false,
     error: false,
   },
-  reducers: {},
+  reducers: {
+    clearInput(state = initialState, action) {
+      state.datetime = "";
+    },
+  },
   extraReducers: {
     [getDateTime.pending]: (state) => {
       state.loading = true;
@@ -35,5 +39,5 @@ const dateSlice = createSlice({
     },
   },
 });
-
+export const { clearInput } = dateSlice.actions;
 export default dateSlice.reducer;

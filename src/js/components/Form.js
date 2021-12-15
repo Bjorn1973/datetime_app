@@ -1,5 +1,5 @@
 import store from "../data";
-import { getDateTime } from "../data/datetime";
+import datetime, { getDateTime, clearInput } from "../data/datetime";
 import { toast } from "bulma-toast";
 
 class Form {
@@ -59,6 +59,7 @@ class Form {
           dismissible: true,
           animate: { in: "fadeIn", out: "fadeOut" },
         });
+        store.dispatch(clearInput());
       } else {
         store.dispatch(getDateTime(this.inputRef.value));
       }
