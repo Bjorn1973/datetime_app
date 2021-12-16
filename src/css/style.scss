@@ -13,75 +13,76 @@ html {
     background-color: rgb(242, 242, 242, 0.8);
     width: 100%;
     height: 100vh;
-  }
-}
-.container {
-  .introWrapper {
-    padding-top: 6rem;
-    padding-bottom: 3rem;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    .title {
-      margin: 0.5rem;
-      color: #000080;
-    }
-    .block {
-      margin: 2rem 1.5rem;
-      font-size: 1.2rem;
-      .intro__question {
-        color: #000099;
-        font-size: 1.5rem;
-        font-weight: 700;
-      }
-      .intro__text {
-        margin-top: 0.5rem;
-      }
-    }
-  }
-  .columns {
-    margin-left: 0.5rem;
-    .column {
-      padding: 1rem;
-      &.datetime {
-        visibility: hidden;
-        padding-top: 3.75rem;
-      }
-      .title__date,
-      .title__time {
-        color: #0000b3;
-      }
-      .title__date__cal,
-      .title__date__clock {
-        display: none;
-        fill: #0000b3;
-      }
-      .title__date__askedDate,
-      .title__date__askedTime {
-        color: #0000ff;
-      }
-      .field {
-        .label {
-          color: #0000b3;
-          font-size: 1.5rem;
+
+    .container {
+      .introWrapper {
+        padding-top: 6rem;
+        padding-bottom: 3rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        .title {
+          margin: 0.5rem;
+          color: #000080;
         }
-        .input {
-          width: 50%;
-        }
-        .button.is-primary {
-          width: 20%;
-          display: flex;
-          align-items: stretch;
-          justify-content: space-around;
-          margin-top: 0.5rem;
-          background-color: #0000ff;
-          font-weight: 500;
-          &:hover {
-            background-color: #0000cc;
+        .block {
+          margin: 2rem 1.5rem;
+          font-size: 1.2rem;
+          .intro__question {
+            color: #000099;
+            font-size: 1.5rem;
+            font-weight: 700;
           }
-          .button__arrow {
-            display: block;
-            fill: white;
+          .intro__text {
+            margin-top: 0.5rem;
+          }
+        }
+      }
+      .columns {
+        margin-left: 0.5rem;
+        .column {
+          padding: 1rem;
+          &.datetime {
+            visibility: hidden;
+            padding-top: 3.75rem;
+          }
+          .title__date,
+          .title__time {
+            color: #0000b3;
+          }
+          .title__date__cal,
+          .title__date__clock {
+            display: none;
+            fill: #0000b3;
+          }
+          .title__date__askedDate,
+          .title__date__askedTime {
+            color: #0000ff;
+          }
+          .field {
+            .label {
+              color: #0000b3;
+              font-size: 1.5rem;
+            }
+            .input {
+              width: 50%;
+            }
+            .button.is-primary {
+              width: 20%;
+              display: flex;
+              align-items: stretch;
+              justify-content: space-around;
+              margin-top: 0.5rem;
+              background-color: #0000b3;
+              font-weight: 500;
+              &:hover {
+                background-color: #0000ff;
+              }
+              .button__arrow {
+                display: block;
+                fill: white;
+              }
+            }
           }
         }
       }
@@ -89,27 +90,24 @@ html {
   }
 }
 @media screen and (max-width: 1440px) {
-  .container {
+  html body .container {
     .introWrapper {
       padding-top: 5rem;
       padding-bottom: 2.5rem;
     }
-    .columns {
-      .column {
-        .field {
-          .input {
-            width: 70%;
-          }
-          .button.is-primary {
-            width: 40%;
-          }
-        }
+    .columns .column .field {
+      .input {
+        width: 70%;
+      }
+      .button.is-primary {
+        width: 40%;
       }
     }
   }
 }
+
 @media screen and (max-width: 1024px) {
-  .container {
+  html body .container {
     .introWrapper {
       padding-top: 3rem;
       padding-bottom: 1.5rem;
@@ -120,7 +118,7 @@ html {
   }
 }
 @media screen and (max-width: 890px) {
-  .container {
+  html body .container {
     .introWrapper {
       padding-top: 2rem;
       padding-bottom: 1rem;
@@ -128,117 +126,96 @@ html {
   }
 }
 @media screen and (max-width: 835px) {
-  .container {
-    .columns {
-      .column {
-        .field {
-          .input {
-            width: 100%;
-          }
-          .button.is-primary {
-            width: 100%;
-            .button__arrow {
-              display: block;
-              fill: white;
-            }
-          }
-        }
+  html body .container .columns .column .field {
+    .input {
+      width: 100%;
+    }
+    .button.is-primary {
+      width: 100%;
+      .button__arrow {
+        display: block;
+        fill: white;
       }
     }
   }
 }
+
 @media screen and (max-width: 768px) {
-  .container {
-    .introWrapper {
-      .block {
-        .intro__text {
-          margin: 0rem;
-        }
-      }
+  html body .container .introWrapper .block .intro__text {
+    margin: 0rem;
+  }
+}
+
+.columns {
+  margin: 1rem;
+  margin-top: 0;
+  .column {
+    padding-left: 0rem;
+    &.datetime {
+      padding-top: 2rem;
     }
-    .columns {
-      margin: 1rem;
-      margin-top: 0;
-      .column {
-        padding-left: 0rem;
-        &.datetime {
-          padding-top: 2rem;
-        }
-        .field {
-          padding-left: 0;
-          .input {
-            width: 70%;
-          }
-          .button.is-primary {
-            width: 35%;
-          }
-        }
+    .field {
+      padding-left: 0;
+      .input {
+        width: 70%;
+      }
+      .button.is-primary {
+        width: 35%;
       }
     }
   }
 }
+
 @media screen and (max-width: 635px) {
-  .container {
-    .introWrapper {
-      .block {
-        margin: 1rem;
-      }
-    }
+  html body .container .introWrapper .block {
+    margin: 1rem;
   }
 }
+
 @media screen and (max-width: 500px) {
-  .container {
+  html body .container {
     .introWrapper {
       padding-top: 1.5rem;
       padding-bottom: 0.75rem;
     }
-    .columns {
-      .column {
-        .field {
-          .input {
-            width: 100%;
-          }
-          .button.is-primary {
-            width: 100%;
-          }
-        }
+    .columns .column .field {
+      .input {
+        width: 100%;
+      }
+      .button.is-primary {
+        width: 100%;
       }
     }
   }
 }
+
 @media screen and (max-width: 470px) {
-  .container {
-    .introWrapper {
-      .intro.title {
-        text-align: center;
-      }
-    }
+  html body .container .introWrapper .intro.title {
+    text-align: center;
   }
 }
+
 @media screen and (max-width: 360px) {
-  .container {
+  html body .container {
     .introWrapper {
       padding-top: 1rem;
       padding-bottom: 0.5rem;
     }
-    .columns {
-      .column {
-        .title__date,
-        .title__time {
-          display: none;
-          color: #0000b3;
-        }
-        .title__date__cal,
-        .title__date__clock {
-          display: inline-block;
-          fill: #0000b3;
-        }
-      }
+    .columns .column .title__date,
+    .title__time {
+      display: none;
+      color: #0000b3;
+    }
+    .title__date__cal,
+    .title__date__clock {
+      display: inline-block;
+      fill: #0000b3;
     }
   }
 }
+
 @media screen and (max-width: 340px) {
-  .container {
+  html body .container {
     .introWrapper {
       padding-top: 0.5rem;
       padding-bottom: 0.25rem;
