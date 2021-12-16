@@ -141,8 +141,11 @@ html {
 }
 
 @media screen and (max-width: 768px) {
-  html body .container .introWrapper .block .intro__text {
-    margin: 0rem;
+  html body {
+    height: 100%;
+    .container .introWrapper .block .intro__text {
+      margin: 0rem;
+    }
   }
 }
 
