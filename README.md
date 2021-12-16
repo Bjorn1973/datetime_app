@@ -36,7 +36,8 @@ link: https://timestampconverter.surge.sh
 
 5.  Demo
 
-![ezgif com-gif-maker (1)](https://user-images.githubusercontent.com/76473559/146451955-7e80fe95-705c-4fab-a7fe-d34310b59d68.gif)
+
+![ezgif com-gif-maker (2)](https://user-images.githubusercontent.com/76473559/146453690-6cfce6e3-e637-4f39-9fa1-a2b5c1236d47.gif)
 
 
 
