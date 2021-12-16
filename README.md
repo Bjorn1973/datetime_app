@@ -4,7 +4,7 @@ link: https://timestampconverter.surge.sh
 
         This app converts an Unix timestamp to a date- and timereference.
 
-![homepage](https://github.com/Bjorn1973/datetime_app/blob/main/src/images/image/homegpage.png)
+![homepage](https://github.com/Bjorn1973/datetime_app/blob/main/src/images/image/homepage.png)
 
 2.  Description
 

@@ -4,9 +4,6 @@ export default class Intro {
   constructor(holder) {
     this.holder = holder;
     this.init();
-    // this.render();
-    // store.subscribe(this.render.bind(this));
-    // this.setEvents();
   }
   init() {
     this.holder.insertAdjacentHTML(
@@ -22,6 +19,4 @@ export default class Intro {
       `
     );
   }
-  //   render() {}
-  //   setEvents() {}
 }

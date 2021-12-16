@@ -9,7 +9,6 @@ export default class Datetime {
     this.init();
     this.render();
     store.subscribe(this.render.bind(this));
-    // this.setEvents();
   }
   init() {
     this.holder.insertAdjacentHTML(
@@ -30,17 +29,24 @@ export default class Datetime {
 
   render() {
     if (store.getState().datetime.datetime) {
-      this.dateRef.innerText = store
-        .getState()
-        .datetime.datetime.slice(0, 10)
-        .split("-")
-        .reverse()
-        .join("-");
+      const dateString = store.getState().datetime.datetime;
+      const dayName = new Date(dateString).toLocaleDateString("en-US", {
+        weekday: "short",
+      });
+      console.log(dayName);
+      this.dateRef.innerText =
+        dayName +
+        ", " +
+        store
+          .getState()
+          .datetime.datetime.slice(0, 10)
+          .split("-")
+          .reverse()
+          .join("-");
       this.timeRef.innerText = store.getState().datetime.datetime.slice(-8);
       this.datetime.style.visibility = "visible";
     } else {
       this.datetime.style.visibility = "hidden";
     }
   }
-  //   setEvents() {}
 }
