@@ -35,5 +35,8 @@ link: https://timestampconverter.surge.sh
     ![focus input](https://github.com/Bjorn1973/datetime_app/blob/main/src/images/image/example3.png)
 
 5.  Demo
-![ezgif com-gif-maker](https://user-images.githubusercontent.com/76473559/146451628-6b45d2f6-37ed-474a-b17e-447989e08713.gif)
+
+![ezgif com-gif-maker (1)](https://user-images.githubusercontent.com/76473559/146451955-7e80fe95-705c-4fab-a7fe-d34310b59d68.gif)
+
+
 
