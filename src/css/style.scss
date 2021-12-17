@@ -13,9 +13,15 @@ html {
     background-color: rgb(242, 242, 242, 0.8);
     width: 100%;
     height: 100vh;
-
+    position: relative;
+    .github-corner {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
     .container {
       .introWrapper {
+        width: 95%;
         padding-top: 6rem;
         padding-bottom: 3rem;
         display: flex;
@@ -26,6 +32,7 @@ html {
           color: #000080;
         }
         .block {
+          width: 100%;
           margin: 2rem 1.5rem;
           font-size: 1.2rem;
           .intro__question {
@@ -39,6 +46,7 @@ html {
         }
       }
       .columns {
+        width: 95%;
         margin-left: 0.5rem;
         .column {
           padding: 1rem;
@@ -71,12 +79,16 @@ html {
               width: 20%;
               display: flex;
               align-items: stretch;
-              justify-content: space-around;
+              justify-content: center;
               margin-top: 0.5rem;
               background-color: #0000b3;
               font-weight: 500;
               &:hover {
                 background-color: #0000ff;
+              }
+              .button__text {
+                display: block;
+                flex-basis: 5rem;
               }
               .button__arrow {
                 display: block;
@@ -115,6 +127,9 @@ html {
         margin: 1rem;
       }
     }
+    .columns .column {
+      padding: 0.5rem;
+    }
   }
 }
 @media screen and (max-width: 890px) {
@@ -148,9 +163,8 @@ html {
     }
   }
 }
-
 .columns {
-  margin: 1rem;
+  margin: 0rem;
   margin-top: 0;
   .column {
     padding-left: 0rem;
@@ -176,41 +190,56 @@ html {
 }
 
 @media screen and (max-width: 500px) {
-  html body .container {
-    .introWrapper {
-      padding-top: 1.5rem;
-      padding-bottom: 0.75rem;
-    }
-    .columns .column .field {
-      .input {
-        width: 100%;
-      }
-      .button.is-primary {
-        width: 100%;
+  html body {
+    .github-corner svg {
+      width: 75px;
+      height: 75px;
+
+      .container {
+        .introWrapper {
+          padding-top: 1.5rem;
+          padding-bottom: 0.75rem;
+        }
+        .columns .column .field {
+          .input {
+            width: 100%;
+          }
+          .button.is-primary {
+            width: 100%;
+          }
+        }
       }
     }
   }
 }
-
-@media screen and (max-width: 470px) {
-  html body .container .introWrapper .intro.title {
-    text-align: center;
+@media screen and (max-width: 495px) {
+  html body {
+    .github-corner svg {
+      width: 80px;
+      height: 80px;
+    }
+    .container .introWrapper .intro.title {
+      text-align: center;
+    }
   }
 }
-
 @media screen and (max-width: 360px) {
   html body .container {
     .introWrapper {
       padding-top: 1rem;
       padding-bottom: 0.5rem;
     }
-    .columns .column .title__date,
-    .title__time {
-      display: none;
-      color: #0000b3;
+    .columns .column.datetime {
+      padding-top: 1.5rem;
+      .title__date,
+      .title__time {
+        display: none;
+        color: #0000b3;
+      }
     }
-    .title__date__cal,
-    .title__date__clock {
+
+    .columns .column .title__date__cal,
+    .columns .column .title__date__clock {
       display: inline-block;
       fill: #0000b3;
     }
@@ -218,17 +247,49 @@ html {
 }
 
 @media screen and (max-width: 340px) {
-  html body .container {
-    .introWrapper {
-      padding-top: 0.5rem;
-      padding-bottom: 0.25rem;
+  html body {
+    .github-corner svg {
+      width: 60px;
+      height: 60px;
     }
-    .columns {
-      margin: 0.5rem;
-      .column {
-        &.form,
+    .container {
+      .introWrapper {
+        padding-top: 0.5rem;
+        padding-bottom: 0.25rem;
+      }
+      .columns {
+        .column {
+          &.form,
+          &.datetime {
+            padding: 0.5rem;
+            .title__date__cal,
+            .title__date__clock {
+              display: inline-block;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 321px) {
+    html body .container {
+      .introWrapper {
+        .block {
+          .intro__question {
+            font-size: 1.4rem;
+          }
+        }
+      }
+      .columns .column {
+        padding: 0.5rem;
         &.datetime {
-          padding: 0.5rem;
+          .title {
+            font-size: 1.8rem;
+          }
+          .title__date__cal,
+          .title__date__clock {
+            display: inline-block;
+          }
         }
       }
     }

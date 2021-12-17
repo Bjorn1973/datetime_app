@@ -33,7 +33,6 @@ export default class Datetime {
       const dayName = new Date(dateString).toLocaleDateString("en-US", {
         weekday: "short",
       });
-      console.log(dayName);
       this.dateRef.innerText =
         dayName +
         ", " +
