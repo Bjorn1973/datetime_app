@@ -30,7 +30,9 @@ export default class Datetime {
   render() {
     if (store.getState().datetime.datetime) {
       const dateString = store.getState().datetime.datetime;
-      const dayName = new Date(dateString).toLocaleDateString("en-US", {
+      const dayName = new Date(
+        dateString.replace(/ /g, "T")
+      ).toLocaleDateString("en-US", {
         weekday: "short",
       });
       this.dateRef.innerText =
